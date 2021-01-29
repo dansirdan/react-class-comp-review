@@ -2,7 +2,7 @@ import * as React from "react";
 
 class UserHome extends React.Component {
   render() {
-    return <div className='App'>User Home</div>;
+    return <div>User Home</div>;
   }
 }
 

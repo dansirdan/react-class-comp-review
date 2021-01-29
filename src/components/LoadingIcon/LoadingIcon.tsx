@@ -1,8 +1,9 @@
 import * as React from 'react';
+import '../../scss/Loading-Spinner.scss'
 
 const LoadingIcon: React.FC = () => {
     return (
-        <p>Loading</p>
+        <div className="loader"/>
     )
 }
 

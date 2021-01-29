@@ -27,35 +27,29 @@ export interface Store {
     loading: boolean;
 }
 
-// const testUserStateOne: Store = {
-//     auth: {
-//         username: "dan",
-//         wins: 1,
-//         losses: 0,
-//         draws: 0,
-//         email: "dan@dan.com",
-//         role: "game-user"
-//     },
-//     loading: false
-// }
+// Firebase types
+export interface FirebaseAuthUserObj {
+    email: string;
+    password: string;
+}
 
-// const testUserStateTwo: Store = {
-//     auth: {
-//         firstName: "Daniel",
-//         lastName: "Mont-Eton",
-//         email: "dan@dan.com",
-//         role: "admin"
-//     },
-//     loading: false
-// }
+export interface FirebaseAuthUpdateUser {
+    displayName: string;
+    photoURL?: string;
+}
 
-// const testUserStateNull: Store = {
-//     auth: null,
-//     loading: false
-// }
-
+// COMPONENT PROPS TYPES
 export interface PrivateRoutesProps extends RouteProps {
     auth: UserState;
     loading: boolean;
     redirectPath: string;
 }
+
+// COMPONENT STATE TYPES
+export interface SignupFormState {
+    email: string;
+    password: string;
+    confirmPassword: string;
+}
+
+export interface LoginFormState extends SignupFormState{};
