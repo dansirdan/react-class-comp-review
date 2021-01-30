@@ -1,4 +1,4 @@
-export default {
+const config = {
     apiKey: "AIzaSyBOHnadP81lwhp_a5hUI5wVlK2ugAszL4Y",
     authDomain: "shield-hero-25565.firebaseapp.com",
     projectId: "shield-hero-25565",
@@ -8,3 +8,5 @@ export default {
     measurementId: "G-RPHEPY6JL7",
     databaseURL: ""
 };
+
+export default config;

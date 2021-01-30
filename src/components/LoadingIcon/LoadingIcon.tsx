@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../../scss/Loading-Spinner.scss'
+import '../../scss/loading-spinner.scss'
 
 const LoadingIcon: React.FC = () => {
     return (

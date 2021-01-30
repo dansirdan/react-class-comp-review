@@ -1,4 +1,5 @@
 import * as React from "react";
+import './scss/app.scss';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/Store";
@@ -10,7 +11,7 @@ import AdminHome from "./views/AdminHome";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Provider store={store}>
         <Router>
           <Switch>

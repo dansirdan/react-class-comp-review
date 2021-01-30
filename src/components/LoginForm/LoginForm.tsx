@@ -5,7 +5,6 @@ class LoginForm extends React.Component {
   readonly state: LoginFormState = {
     email: "",
     password: "",
-    confirmPassword: "",
   };
 
   handleChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
@@ -22,38 +21,24 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Email
-            <input
-              type='text'
-              name='email'
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Password
-            <input
-              type='text'
-              name='password'
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Confirm Password
-            <input
-              type='text'
-              name='confirmPassword'
-              value={this.state.confirmPassword}
-              onChange={this.handleChange}
-            />
-          </label>
-          <button type='submit'>Submit</button>
-        </form>
-      </div>
+      <form onSubmit={this.handleSubmit} className='auth-form'>
+        <h3>Log In</h3>
+        <label>Email</label>
+        <input
+          type='text'
+          name='email'
+          value={this.state.email}
+          onChange={this.handleChange}
+        />
+        <label>Password</label>
+        <input
+          type='text'
+          name='password'
+          value={this.state.password}
+          onChange={this.handleChange}
+        />
+        <button type='submit'>Submit</button>
+      </form>
     );
   }
 }

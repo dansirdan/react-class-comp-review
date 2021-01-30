@@ -2,7 +2,7 @@
 import firebase from './firebase';
 import { FirebaseAuthUserObj, FirebaseAuthUpdateUser } from '../types';
 
-export default {
+const FIREBASE_API = {
     signUpUser: (userObj: FirebaseAuthUserObj) => {
         return firebase.auth().createUserWithEmailAndPassword(userObj.email, userObj.password);
     },
@@ -21,3 +21,5 @@ export default {
         return user?.delete();
     }
 }
+
+export default FIREBASE_API;

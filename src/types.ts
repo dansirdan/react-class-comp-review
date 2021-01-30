@@ -46,10 +46,11 @@ export interface PrivateRoutesProps extends RouteProps {
 }
 
 // COMPONENT STATE TYPES
-export interface SignupFormState {
+export interface LoginFormState {
     email: string;
     password: string;
-    confirmPassword: string;
 }
 
-export interface LoginFormState extends SignupFormState{};
+export interface SignupFormState extends LoginFormState {
+    confirmPassword: string;
+}
